@@ -31,12 +31,14 @@ class _Example3dChoiceChipState extends State<Example3dChoiceChip> {
           ChoiceChip3D(
             style: ChoiceChip3DStyle.blue,
             onSelected: () => setState(() => choiceIndex = 0),
+            onUnSelected: () => null,
             selected: choiceIndex == 0,
             child: Text("Choice One"),
           ),
           ChoiceChip3D(
             style: ChoiceChip3DStyle.blue,
             onSelected: () => setState(() => choiceIndex = 1),
+            onUnSelected: () => null,
             selected: choiceIndex == 1,
             child: Text("Choice Two"),
           )
@@ -45,5 +47,6 @@ class _Example3dChoiceChipState extends State<Example3dChoiceChip> {
     )));
   }
 }
+
 
 ```
