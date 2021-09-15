@@ -2,6 +2,10 @@
 
 This package provides simple 3D choice chip.
 
+<img src="https://github.com/matwright/flutter_3d_choice_chip/tree/main/example/flutter_3d_choice_chip.webp" width="300">
+
+
+
 ## Getting Started
 
 Import the file.
