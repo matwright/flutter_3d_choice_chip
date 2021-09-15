@@ -1,22 +1,49 @@
 # A Complete example
 
 ```
-import 'package:button3d/button3d.dart';
+import 'package:flutter_3d_choice_chip/flutter_3d_choice_chip.dart';
 import 'package:flutter/material.dart';
 
-var button1 = Button3d(
-  style: Button3dStyle.BLUE,
-  onPressed: () {},
-  child: Text("Add"),
-);
+void main() {
+  runApp(
+    Example3dChoiceChip(),
+  );
+}
 
-var button2 = Button3d(
-  style: Button3dStyle(
-      topColor: Colors.lightGreen,
-      backColor: Colors.deepOrange,
-      borderRadius: BorderRadius.zero
-  ),
-  onPressed: () {},
-  child: Text("Add"),
-);
+class Example3dChoiceChip extends StatefulWidget {
+  @override
+  State<Example3dChoiceChip> createState() => _Example3dChoiceChipState();
+}
+
+class _Example3dChoiceChipState extends State<Example3dChoiceChip> {
+  int choiceIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Align(
+      alignment: Alignment.center,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          ChoiceChip3D(
+            style: ChoiceChip3DStyle.blue,
+            onSelected: () => setState(() => choiceIndex = 0),
+            selected: choiceIndex == 0,
+            child: Text("Choice One"),
+          ),
+          ChoiceChip3D(
+            style: ChoiceChip3DStyle.blue,
+            onSelected: () => setState(() => choiceIndex = 1),
+            selected: choiceIndex == 1,
+            child: Text("Choice Two"),
+          )
+        ],
+      ),
+    )));
+  }
+}
+
 ```

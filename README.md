@@ -17,7 +17,7 @@ ChoiceChip3d(
   style: Button3dStyle.BLUE, // Button3dStyle.RED, Button3dStyle.WHITE
   selected: true,
   onSelected: () {},
-  onUnselected: () {},
+  onUnSelected: () {},
   child: Text("My Choice"),
 );
 ```
@@ -32,7 +32,7 @@ ChoiceChip3d(
       borderRadius: BorderRadius.zero
   ),
   onSelected: () {},
-  onUnselected: () {},
+  onUnSelected: () {},
   child: Text("My Choice"),
 );
 ```

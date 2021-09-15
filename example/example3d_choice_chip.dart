@@ -2,31 +2,41 @@ import 'package:flutter_3d_choice_chip/flutter_3d_choice_chip.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  /// Comment or uncomment to run both examples
   runApp(
     Example3dChoiceChip(),
-    //WithPages()
   );
 }
 
-class Example3dChoiceChip extends StatelessWidget {
+class Example3dChoiceChip extends StatefulWidget {
+  @override
+  State<Example3dChoiceChip> createState() => _Example3dChoiceChipState();
+}
+
+class _Example3dChoiceChipState extends State<Example3dChoiceChip> {
+  int choiceIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            body: Container(
+            body: Align(
+      alignment: Alignment.center,
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           ChoiceChip3D(
             style: ChoiceChip3DStyle.blue,
-            onSelected: (bool) {},
-            selected: true,
+            onSelected: () => setState(() => choiceIndex = 0),
+            onUnSelected: () => null,
+            selected: choiceIndex == 0,
             child: Text("Choice One"),
           ),
           ChoiceChip3D(
             style: ChoiceChip3DStyle.blue,
-            onSelected: (bool) {},
-            selected: false,
+            onSelected: () => setState(() => choiceIndex = 1),
+            onUnSelected: () => null,
+            selected: choiceIndex == 1,
             child: Text("Choice Two"),
           )
         ],

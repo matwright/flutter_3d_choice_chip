@@ -2,8 +2,6 @@ library flutter_3d_choice_chip;
 
 import 'package:flutter/material.dart';
 
-typedef Bool2VoidFunc = void Function(bool);
-
 class ChoiceChip3DStyle {
   final Color topColor;
   final Color backColor;
@@ -26,7 +24,8 @@ class ChoiceChip3DStyle {
 }
 
 class ChoiceChip3D extends StatelessWidget {
-  final Bool2VoidFunc onSelected;
+  final VoidCallback onSelected;
+  final VoidCallback onUnSelected;
   final Widget child;
   final ChoiceChip3DStyle style;
   final double width;
@@ -35,6 +34,7 @@ class ChoiceChip3D extends StatelessWidget {
 
   const ChoiceChip3D(
       {required this.onSelected,
+      required this.onUnSelected,
       required this.child,
       this.style = ChoiceChip3DStyle.white,
       this.width = 100.0,
@@ -87,9 +87,7 @@ class ChoiceChip3D extends StatelessWidget {
         alignment: AlignmentDirectional.topCenter,
         children: <Widget>[_buildBackLayout(), _buildTopLayout()],
       ),
-      onTap: () {
-        onSelected(true);
-      },
+      onTap: () => selected ? onUnSelected() : onSelected(),
     );
   }
 }
