@@ -13,8 +13,8 @@ import 'package:flutter_3d_choice_chip/flutter_3d_choice_chip.dart';
 ### Use with default style:
 
 ```
-ChoiceChip3d(
-  style: Button3dStyle.BLUE, // Button3dStyle.RED, Button3dStyle.WHITE
+ChoiceChip3D(
+  style: ChoiceChip3DStyle.blue, // ChoiceChip3DStyle.red, ChoiceChip3DStyle.white
   selected: true,
   onSelected: () {},
   onUnSelected: () {},
@@ -25,7 +25,7 @@ ChoiceChip3d(
 ### Use with custom style:
 
 ```
-ChoiceChip3d(
+ChoiceChip3D(
   style: ChoiceChip3dStyle(
       topColor: Colors.lightGreen,
       backColor: Colors.deepOrange,
