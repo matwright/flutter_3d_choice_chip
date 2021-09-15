@@ -1,3 +1,7 @@
+## [0.1.3] - 15-09-2021
+
+* add border parameter
+
 ## [0.1.2] - 15-09-2021
 
 * add image to readme

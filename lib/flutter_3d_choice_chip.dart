@@ -1,5 +1,6 @@
 library flutter_3d_choice_chip;
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ChoiceChip3DStyle {
@@ -31,6 +32,7 @@ class ChoiceChip3D extends StatelessWidget {
   final double width;
   final double height;
   final bool selected;
+  final BoxBorder? border;
 
   const ChoiceChip3D(
       {required this.onSelected,
@@ -40,6 +42,7 @@ class ChoiceChip3D extends StatelessWidget {
       this.width = 100.0,
       this.height = 90.0,
       this.selected = false,
+      this.border,
       Key? key})
       : super(key: key);
 
@@ -66,6 +69,7 @@ class ChoiceChip3D extends StatelessWidget {
         position: DecorationPosition.background,
         decoration: BoxDecoration(
             borderRadius: style.borderRadius,
+            border: border,
             boxShadow: [BoxShadow(color: style.topColor)]),
         child: ConstrainedBox(
           constraints:
