@@ -1,6 +1,8 @@
 name: flutter_3d_choice_chip
+authors:
+  - Mat Wright <mail@matwright.dev>
 description: Simple 3D choice chip for Flutter
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/matwright/flutter_3d_choice_chip
 repository: https://github.com/matwright/flutter_3d_choice_chip
 environment:
