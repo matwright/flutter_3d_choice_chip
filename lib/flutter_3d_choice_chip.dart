@@ -3,12 +3,24 @@ library flutter_3d_choice_chip;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+///Custom style object
 class ChoiceChip3DStyle {
+  ///the color used for the top part of the chip
   final Color topColor;
+
+  ///the color used for the shadowed part of the chip
   final Color backColor;
+
+  ///the chip border radius
   final BorderRadius borderRadius;
+
+  ///the amount of default elevation
   final double z;
+
+  ///the amount of elevation when selected
   final double selectedZ;
+
+  ///default constructor
   const ChoiceChip3DStyle(
       {this.topColor = const Color(0xFF45484c),
       this.backColor = const Color(0xFF191a1c),
@@ -16,24 +28,47 @@ class ChoiceChip3DStyle {
       this.z = 8.0,
       this.selectedZ = 3.0});
 
+  ///preconfigured red style
   static const red = ChoiceChip3DStyle(
       topColor: Color(0xFFc62f2f), backColor: Color(0xFF922525));
+
+  ///preconfigured blue style
   static const blue = ChoiceChip3DStyle(
       topColor: Color(0xFF25a09c), backColor: Color(0xFF197572));
+
+  ///preconfigured white style
   static const white = ChoiceChip3DStyle(
       topColor: Color(0xFFffffff), backColor: Color(0xFFCFD8DC));
 }
 
+///Stateless Widget Object
+///Use [onSelected] to provide a callback method when the chip is selected
 class ChoiceChip3D extends StatelessWidget {
+  ///void callback when chip's state changes to selected
   final VoidCallback onSelected;
+
+  ///void callback when chip's state changes to unselected
   final VoidCallback onUnSelected;
+
+  ///a child widget for the chip, such as a Text or Icon
   final Widget child;
+
+  ///custom or preconfigured [ChoiceChip3DStyle] object
   final ChoiceChip3DStyle style;
+
+  ///width of chip
   final double width;
+
+  ///height of chip
   final double height;
+
+  ///when this chip is selected or not
   final bool selected;
+
+  ///border
   final BoxBorder? border;
 
+  ///default ChoiceChip3D constructor
   const ChoiceChip3D(
       {required this.onSelected,
       required this.onUnSelected,

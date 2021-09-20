@@ -1,3 +1,8 @@
+## [0.1.4] - 20-09-2021
+
+* add doc comments to public API
+* broaden pubspec description
+
 ## [0.1.3] - 15-09-2021
 
 * add border parameter
